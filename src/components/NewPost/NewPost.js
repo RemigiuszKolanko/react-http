@@ -7,7 +7,7 @@ class NewPost extends Component {
     state = {
         title: '',
         content: '',
-        author: 'Remi'
+        author: 'Max'
     }
 
     postDataHandler = () => {
@@ -17,9 +17,9 @@ class NewPost extends Component {
             aquthor: this.state.author
         }
         axios.post('http://jsonplaceholder.typicode.com/posts', post)
-        .then(response => {
-            console.log(response);
-        });
+            .then(response => {
+                console.log(response);
+            });
     }
 
     render () {
