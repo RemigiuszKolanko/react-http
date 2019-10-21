@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 import './NewPost.css';
 
@@ -14,11 +15,12 @@ class NewPost extends Component {
         const post = {
             title: this.state.title,
             body: this.state.content,
-            aquthor: this.state.author
+            author: this.state.author
         }
         axios.post('posts', post)
             .then(response => {
                 console.log(response);
+                this.props.history.replace('/posts');
             });
     }
 
