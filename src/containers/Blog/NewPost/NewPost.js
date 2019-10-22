@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
 
 import './NewPost.css';
 
@@ -22,10 +21,6 @@ class NewPost extends Component {
                 console.log(response);
                 this.props.history.replace('/posts');
             });
-    }
-
-    componentDidMount() {
-        console.log('props z new post', this.props);
     }
 
     render () {
